@@ -27,7 +27,8 @@
 		},
 		"rust-analyzer.checkOnSave.command": "clippy",
 		"cortex-debug.armToolchainPath": "/usr/bin",
-		"cortex-debug.gdbPath": "/usr/bin/gdb-multiarch"
+		"cortex-debug.gdbPath": "/usr/bin/gdb-multiarch",
+		"editor.formatOnSave": true
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [

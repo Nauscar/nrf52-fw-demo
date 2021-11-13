@@ -1,12 +1,9 @@
 [workspace]
 
-members = [
-  "base",
-  "demo",
-]
+members = ["base", "demo"]
 
 [profile.release]
 codegen-units = 1 # Better optimizations
-debug = false # Symbols don't increase size if enabled
-lto = true # Link time optimizations
-opt-level = "z" # Optimize for size
+debug = false     # Symbols don't increase size if enabled
+lto = true        # Link time optimizations
+opt-level = "z"   # Optimize for size

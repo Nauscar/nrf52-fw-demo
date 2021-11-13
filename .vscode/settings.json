@@ -3,5 +3,6 @@
     "search.exclude": {
         "**/target": true
     },
-    "cortex-debug.armToolchainPath": "/usr/bin"
+    "cortex-debug.armToolchainPath": "/usr/bin",
+    "editor.formatOnSave": true
 }

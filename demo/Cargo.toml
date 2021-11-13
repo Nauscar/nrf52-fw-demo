@@ -6,14 +6,14 @@ version = "0.1.0"
 [features]
 default = ["good-dog"] # good dogs enabled by default
 good-dog = []
-heap = ["base/heap"] # Enables the heap feature in the base crate
+heap = ["base/heap"]   # Enables the heap feature in the base crate
 
 [dependencies]
-base = {version = "0.1.0", path = "../base"}# base crate is a member in the workspace located at path
+base = { version = "0.1.0", path = "../base" }                                                                         # base crate is a member in the workspace located at path
 cortex-m = "^0.7.3"
-cortex-m-rt = {version = "^0.7.0", features = ["device"]}
-cortex-m-rtic = {version = "0.6.0-rc.4", default-features = false, git = "https://github.com/rtic-rs/cortex-m-rtic"}
-embedded-hal = {version = "^0.2.6", features = ["unproven"]}
-nrf52840-hal = {version = "^0.14.0", features = ["rt"]}
-rtt-target = {version = "^0.3.1", features = ["cortex-m"]}
+cortex-m-rt = { version = "^0.7.0", features = ["device"] }
+cortex-m-rtic = { version = "0.6.0-rc.4", default-features = false, git = "https://github.com/rtic-rs/cortex-m-rtic" }
+embedded-hal = { version = "^0.2.6", features = ["unproven"] }
+nrf52840-hal = { version = "^0.14.0", features = ["rt"] }
+rtt-target = { version = "^0.3.1", features = ["cortex-m"] }
 systick-monotonic = "0.1.0-rc.2"
