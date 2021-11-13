@@ -1,7 +1,6 @@
 #![no_std]
 #![no_main]
 
-#[cfg(feature = "heap")]
 mod consts;
 
 use base as _;
@@ -17,9 +16,8 @@ mod app {
             wdt::{handles::HdlN, WatchdogHandle},
         },
         nrf52840_hal as hal,
-        rtic::time::duration::*,
         rtt_target::{rprintln, rtt_init_print},
-        systick_monotonic::Systick,
+        systick_monotonic::*,
     };
 
     #[monotonic(binds = SysTick, default = true)]
@@ -84,7 +82,7 @@ mod app {
 
         let systick = cx.core.SYST;
         let mono = Systick::new(systick, 12_000_000);
-        tick::spawn_after(1.seconds()).unwrap();
+        tick::spawn_after(1.secs()).unwrap();
 
         (
             Shared {},
@@ -115,7 +113,7 @@ mod app {
         groomer1::spawn().unwrap();
         groomer2::spawn().unwrap();
         groomer3::spawn().unwrap();
-        tick::spawn_after(1.seconds()).unwrap();
+        tick::spawn_after(1.secs()).unwrap();
     }
 
     #[task(local = [led0, wd0])]

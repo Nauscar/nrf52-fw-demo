@@ -1,0 +1,7 @@
+{
+    "lldb.executable": "/usr/bin/lldb",
+    "search.exclude": {
+        "**/target": true
+    },
+    "cortex-debug.armToolchainPath": "/usr/bin"
+}
